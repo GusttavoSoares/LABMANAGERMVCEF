@@ -27,6 +27,18 @@ public class ComputerController : Controller
         return View(computer);
     }
 
+    public IActionResult CreateForm()
+    {
+        return View();
+    }
+
+    public IActionResult Create([FromForm] Computer computer)
+    {
+        _context.Computers.Add(computer);
+        _context.SaveChanges();
+        return RedirectToAction("Index");
+    }
+
     public IActionResult Delete(int id)
     {
         Computer? computer = _context.Computers.Find(id);

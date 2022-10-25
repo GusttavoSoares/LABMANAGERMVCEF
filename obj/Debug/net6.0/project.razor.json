@@ -16338,6 +16338,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/gu/Programacao/lp3/LabManager-MVC-EF/Views/Computer/CreateForm.cshtml",
+      "TargetPath": "Views\\Computer\\CreateForm.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/gu/Programacao/lp3/LabManager-MVC-EF/Views/Shared/Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
