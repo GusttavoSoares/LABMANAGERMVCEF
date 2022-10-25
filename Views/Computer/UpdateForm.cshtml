@@ -1,3 +1,5 @@
+@model LabManager_MVC_EF.Models.Computer;
+
 @{
     ViewData["Title"] = "Criar computador";
 }
@@ -6,22 +8,15 @@
     <h3 class="display-4">Atualizar computador</h3>
 </div>
 
-@* @if ( ViewBag.isUpdate ) {
-    <p> vdd </p>
-} else {
-    <p> false </p>
-} *@
-
-
-<form action="Update" method="post">
-    <label for="Id">Id</label> <br>
-    <input type="number" name="Id" id="Id"> <br><br>
+<form action="/Computer/Update" method="post">
+    
+    <input type="hidden" name="Id" id="Id" value="@Model.Id" disable>  <br><br>
 
     <label for="Ram">Ram</label> <br>
-    <input type="number" name="Ram" id="Ram"> <br><br>
+    <input type="number" name="Ram" id="Ram" value="@Model.Ram"> <br><br>
 
     <label for="Processor">Processor</label> <br>
-    <input type="text" name="Processor" id="Processor"> <br><br>
+    <input type="text" name="Processor" id="Processor" value="@Model.Processor"> <br><br>
 
     <button class="btn btn-primary btn-sm" type="submit">Enviar</button>
 

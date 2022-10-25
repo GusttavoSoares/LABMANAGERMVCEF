@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "Criar lab";
+}
+
+<div class="text-center">
+    <h3 class="display-4">Criar lab</h3>
+</div>
+
+@* @if ( ViewBag.isUpdate ) {
+    <p> vdd </p>
+} else {
+    <p> false </p>
+} *@
+
+
+<form action="Create" method="post">
+    <label for="Id">Id</label> <br>
+    <input type="number" name="Id" id="Id"> <br><br>
+
+    <label for="Ram">Number</label> <br>
+    <input type="number" name="Number" id="Number"> <br><br>
+
+    <label for="Processor">Name</label> <br>
+    <input type="text" name="Name" id="Name"> <br><br>
+
+    <label for="Processor">Block</label> <br>
+    <input type="text" name="Block" id="Block"> <br><br>
+
+    <button class="btn btn-primary btn-sm" type="submit">Enviar</button>
+
+</form>

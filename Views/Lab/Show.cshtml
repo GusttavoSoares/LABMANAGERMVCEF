@@ -1,0 +1,27 @@
+@model LabManager_MVC_EF.Models.Lab
+
+@{
+    ViewData["Title"] = $"Lab { Model.Id }";
+    @* bool isUpdate = true; *@
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <b>Id: </b> @Model.Id
+</p>
+
+<p>
+    <b>Number: </b> @Model.Number
+</p>
+
+<p>
+    <b>Name: </b> @Model.Name
+</p>
+
+<p>
+    <b>Name: </b> @Model.Block
+</p>
+
+<a class="btn btn-danger btn-sm" href="/Lab/Delete/@Model.Id">Apagar</a>
+<a class="btn btn-primary btn-sm" href="/Lab/UpdateForm">Atualizar lab</a>

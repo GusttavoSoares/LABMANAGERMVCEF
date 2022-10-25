@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/gu/Programacao/lp3/LabManager-MVC-EF/LabManager-MVC-EF.csproj": {}
+    "/home/estudante/Documentos/LABMANAGERMVCEF/LabManager-MVC-EF.csproj": {}
   },
   "projects": {
-    "/home/gu/Programacao/lp3/LabManager-MVC-EF/LabManager-MVC-EF.csproj": {
+    "/home/estudante/Documentos/LABMANAGERMVCEF/LabManager-MVC-EF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/gu/Programacao/lp3/LabManager-MVC-EF/LabManager-MVC-EF.csproj",
+        "projectUniqueName": "/home/estudante/Documentos/LABMANAGERMVCEF/LabManager-MVC-EF.csproj",
         "projectName": "LabManager-MVC-EF",
-        "projectPath": "/home/gu/Programacao/lp3/LabManager-MVC-EF/LabManager-MVC-EF.csproj",
-        "packagesPath": "/home/gu/.nuget/packages/",
-        "outputPath": "/home/gu/Programacao/lp3/LabManager-MVC-EF/obj/",
+        "projectPath": "/home/estudante/Documentos/LABMANAGERMVCEF/LabManager-MVC-EF.csproj",
+        "packagesPath": "/home/estudante/.nuget/packages/",
+        "outputPath": "/home/estudante/Documentos/LABMANAGERMVCEF/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/gu/.nuget/NuGet/NuGet.Config"
+          "/home/estudante/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -49,7 +49,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -61,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/dotnet6-6.0.110/sdk/6.0.110/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
         }
       }
     }

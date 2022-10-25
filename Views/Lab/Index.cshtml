@@ -1,0 +1,46 @@
+@model IEnumerable<LabManager_MVC_EF.Models.Lab>
+
+@{
+    ViewData["Title"] = "Labs";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+
+<!-- Lógica de View -->
+@if (Model.Count() == 0)
+{
+    <p> Não há laboratorios cadastrados </p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Number</th>
+                <th>Name</th>
+                <th>Block</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var lab in Model)
+            {
+                <tr>
+                    <td>@lab.Id</td>
+                    <td>@lab.Number</td>
+                    <td>@lab.Name</td>
+                    <td>@lab.Block</td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" href="/Lab/Show/@lab.Id">Ver</a>
+                        <a class="btn btn-danger btn-sm" href="/Lab/Delete/@lab.Id">Apagar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}
+
+<a class="btn btn-primary btn-sm" href="/Lab/CreateForm">Criar lab</a>

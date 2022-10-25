@@ -39,14 +39,22 @@ public class ComputerController : Controller
         return RedirectToAction("Index");
     }
 
-    public IActionResult UpdateForm()
+    public IActionResult UpdateForm(int id)
     {
-        return View();
+        Computer computer = _context.Computers.Find(id);
+        return View(computer);
     }
 
     public IActionResult Update([FromForm] Computer computer)
     {
         Computer? computadorEncontrado = _context.Computers.Find(computer.Id);
+
+        if(computadorEncontrado == null)
+        {
+            return NotFound();
+        }
+        
+        computadorEncontrado.Id = computer.Id;
         computadorEncontrado.Processor = computer.Processor;
         computadorEncontrado.Ram = computer.Ram;
 
