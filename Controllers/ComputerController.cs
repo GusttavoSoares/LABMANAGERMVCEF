@@ -27,7 +27,7 @@ public class ComputerController : Controller
         return View(computer);
     }
 
-    public IActionResult CreateForm(bool isUpdate)
+    public IActionResult CreateForm()
     {
         return View();
     }
@@ -39,8 +39,7 @@ public class ComputerController : Controller
         return RedirectToAction("Index");
     }
 
-
-    public IActionResult UpdateForm(bool isUpdate)
+    public IActionResult UpdateForm()
     {
         return View();
     }
