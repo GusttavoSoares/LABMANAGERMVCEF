@@ -16313,6 +16313,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/gu/Programacao/lp3/LabManager-MVC-EF/Views/Computer/UpdateForm.cshtml",
+      "TargetPath": "Views\\Computer\\UpdateForm.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/gu/Programacao/lp3/LabManager-MVC-EF/Views/Computer/Index.cshtml",
       "TargetPath": "Views\\Computer\\Index.cshtml",
       "FileKind": "mvc"

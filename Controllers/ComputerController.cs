@@ -27,7 +27,7 @@ public class ComputerController : Controller
         return View(computer);
     }
 
-    public IActionResult CreateForm()
+    public IActionResult CreateForm(bool isUpdate)
     {
         return View();
     }
@@ -35,6 +35,23 @@ public class ComputerController : Controller
     public IActionResult Create([FromForm] Computer computer)
     {
         _context.Computers.Add(computer);
+        _context.SaveChanges();
+        return RedirectToAction("Index");
+    }
+
+
+    public IActionResult UpdateForm(bool isUpdate)
+    {
+        return View();
+    }
+
+    public IActionResult Update([FromForm] Computer computer)
+    {
+        Computer? computadorEncontrado = _context.Computers.Find(computer.Id);
+        computadorEncontrado.Processor = computer.Processor;
+        computadorEncontrado.Ram = computer.Ram;
+
+        _context.Computers.Update(computadorEncontrado);
         _context.SaveChanges();
         return RedirectToAction("Index");
     }
