@@ -1,0 +1,21 @@
+@model LabManager_MVC_EF.Models.Computer
+
+@{
+    ViewData["Title"] = $"Computador { Model.Id }";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <b>Id: </b> @Model.Id
+</p>
+
+<p>
+    <b>Ram: </b> @Model.Ram
+</p>
+
+<p>
+    <b>Processor: </b> @Model.Processor
+</p>
+
+<a class="btn btn-danger btn-sm" href="/Computer/Delete/@Model.Id">Apagar</a>
