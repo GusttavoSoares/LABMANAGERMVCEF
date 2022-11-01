@@ -1,3 +1,5 @@
+@model LabManager_MVC_EF.Models.Computer;
+
 @{
     ViewData["Title"] = "Criar computador";
 }
@@ -7,15 +9,15 @@
 </div>
 
 <form asp-controller="Computer" asp-action="Create" method="post">
-    
+
     <label for="Id">Id</label> <br>
-    <input type="number" name="Id" id="Id"> <br><br>
+    <input asp-for="Id"> <br><br>
 
     <label for="Ram">Ram</label> <br>
-    <input type="number" name="Ram" id="Ram"> <br><br>
+    <input asp-for="Ram"> <br><br>
 
     <label for="Processor">Processor</label> <br>
-    <input type="text" name="Processor" id="Processor"> <br><br>
+    <input asp-for="Processor"> <br><br>
 
     <button class="btn btn-primary btn-sm" type="submit">Enviar</button>
 

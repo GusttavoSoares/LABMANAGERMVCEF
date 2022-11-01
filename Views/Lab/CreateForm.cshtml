@@ -1,3 +1,5 @@
+@model LabManager_MVC_EF.Models.Lab;
+
 @{
     ViewData["Title"] = "Criar lab";
 }
@@ -9,16 +11,16 @@
 <form asp-controller="Lab" asp-action="Create" method="post">
 
     <label for="Id">Id</label> <br>
-    <input type="number" name="Id" id="Id"> <br><br>
+    <input asp-for="Id"> <br><br>
 
     <label for="Ram">Number</label> <br>
-    <input type="number" name="Number" id="Number"> <br><br>
+    <input asp-for="Number"> <br><br>
 
     <label for="Processor">Name</label> <br>
-    <input type="text" name="Name" id="Name"> <br><br>
+    <input asp-for="Name"> <br><br>
 
     <label for="Processor">Block</label> <br>
-    <input type="text" name="Block" id="Block"> <br><br>
+    <input asp-for="Block"> <br><br>
 
     <button class="btn btn-primary btn-sm" type="submit">Enviar</button>
 
