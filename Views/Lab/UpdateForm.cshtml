@@ -10,16 +10,16 @@
 
 <form asp-controller="Lab" asp-action="Update" method="post">
 
-    <input type="hidden" name="Id" id="Id" value="@Model.Id" disable>  <br><br>
+    <input type="hidden" asp-for="@Model.Id" value="@Model.Id">  <br><br>
 
     <label for="Number">Number</label> <br>
-    <input type="number" name="Number" id="Number" value=@Model.Number> <br><br>
+    <input asp-for="@Model.Number" value=@Model.Number> <br><br>
 
     <label for="Name">Name</label> <br>
-    <input type="text" name="Name" id="Name" value=@Model.Name> <br><br>
+    <input asp-for="@Model.Name" value=@Model.Name> <br><br>
 
     <label for="Block">Block</label> <br>
-    <input type="text" name="Block" id="Block" value=@Model.Block> <br><br>
+    <input asp-for="@Model.Block" value=@Model.Block> <br><br>
 
     <button class="btn btn-primary btn-sm" type="submit">Enviar</button>
 
