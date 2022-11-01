@@ -2,7 +2,6 @@
 
 @{
     ViewData["Title"] = $"Lab { Model.Id }";
-    @* bool isUpdate = true; *@
 }
 
 <h1>@ViewData["Title"]</h1>
@@ -23,5 +22,5 @@
     <b>Name: </b> @Model.Block
 </p>
 
-<a class="btn btn-danger btn-sm" href="/Lab/Delete/@Model.Id">Apagar</a>
-<a class="btn btn-primary btn-sm" href="/Lab/UpdateForm">Atualizar lab</a>
+<a class="btn btn-danger btn-sm" asp-controller="Lab" asp-action="Delete" asp-route-id="@Model.Id">Apagar</a>
+<a class="btn btn-primary btn-sm" asp-controller="Lab" asp-action="UpdateForm" asp-route-id="@Model.Id">Atualizar lab</a>

@@ -1,7 +1,7 @@
 @model LabManager_MVC_EF.Models.Computer;
 
 @{
-    ViewData["Title"] = "Criar computador";
+    ViewData["Title"] = "Atualizar computador";
 }
 
 <div class="text-center">
@@ -13,7 +13,7 @@
     <input type="hidden" name="Id" id="Id" value="@Model.Id" disable>  <br><br>
 
     <label for="Ram">Ram</label> <br>
-    <input type="number" name="Ram" id="Ram" value="@Model.Ram"> <br><br>
+    <input type="text" name="Ram" id="Ram" value="@Model.Ram"> <br><br>
 
     <label for="Processor">Processor</label> <br>
     <input type="text" name="Processor" id="Processor" value="@Model.Processor"> <br><br>

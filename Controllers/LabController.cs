@@ -53,10 +53,10 @@ public class LabController : Controller
         return RedirectToAction("Index");
     }
 
-    public IActionResult UpdateForm()
+    public IActionResult UpdateForm(int id)
     {
-        
-        return View();
+        Lab lab = _context.Labs.Find(id);
+        return View(lab);
     }
 
     public IActionResult Update([FromForm] Lab lab)

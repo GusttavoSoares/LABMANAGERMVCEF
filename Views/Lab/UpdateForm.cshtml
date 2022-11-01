@@ -1,3 +1,5 @@
+@model LabManager_MVC_EF.Models.Lab;
+
 @{
     ViewData["Title"] = "Atualizar lab";
 }
@@ -6,28 +8,19 @@
     <h3 class="display-4">Atualizar lab</h3>
 </div>
 
-@* @if ( ViewBag.isUpdate ) {
-    <p> vdd </p>
-} else {
-    <p> false </p>
-} *@
 
-@{   
-      
-}  
+<form action="/Lab/Update" method="post">
 
-<form action="Update" method="post">
-    <label for="Id">Id</label> <br>
-    <input type="number" name="Id" id="Id"> <br><br>
+    <input type="hidden" name="Id" id="Id" value="@Model.Id" disable>  <br><br>
 
-    <label for="Ram">Number</label> <br>
-    <input type="number" name="Number" id="Number"> <br><br>
+    <label for="Number">Number</label> <br>
+    <input type="number" name="Number" id="Number" value=@Model.Number> <br><br>
 
     <label for="Name">Name</label> <br>
-    <input type="text" name="Name" id="Name"> <br><br>
+    <input type="text" name="Name" id="Name" value=@Model.Name> <br><br>
 
-    <label for="Name">Block</label> <br>
-    <input type="text" name="Block" id="Block"> <br><br>
+    <label for="Block">Block</label> <br>
+    <input type="text" name="Block" id="Block" value=@Model.Block> <br><br>
 
     <button class="btn btn-primary btn-sm" type="submit">Enviar</button>
 

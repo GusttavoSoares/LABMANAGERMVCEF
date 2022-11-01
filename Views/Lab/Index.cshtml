@@ -33,8 +33,8 @@ else
                     <td>@lab.Name</td>
                     <td>@lab.Block</td>
                     <td>
-                        <a class="btn btn-primary btn-sm" href="/Lab/Show/@lab.Id">Ver</a>
-                        <a class="btn btn-danger btn-sm" href="/Lab/Delete/@lab.Id">Apagar</a>
+                        <a class="btn btn-primary btn-sm" asp-controller="Lab" asp-action="Show" asp-route-id="@lab.Id">Ver</a>
+                        <a class="btn btn-danger btn-sm" asp-controller="Lab" asp-action="Delete" asp-route-id="@lab.Id">Apagar</a>
                     </td>
                 </tr>
             }
@@ -43,4 +43,4 @@ else
 
 }
 
-<a class="btn btn-primary btn-sm" href="/Lab/CreateForm">Criar lab</a>
+  <a class="btn btn-primary btn-sm" asp-controller="Lab" asp-action="CreateForm">Criar lab</a>
