@@ -77,5 +77,4 @@ public class ComputerController : Controller
 
         return RedirectToAction("Index");
     }
-    
 }

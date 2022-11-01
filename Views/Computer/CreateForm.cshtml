@@ -6,14 +6,8 @@
     <h3 class="display-4">Criar computador</h3>
 </div>
 
-@* @if ( ViewBag.isUpdate ) {
-    <p> vdd </p>
-} else {
-    <p> false </p>
-} *@
-
-
 <form asp-controller="Computer" asp-action="Create" method="post">
+    
     <label for="Id">Id</label> <br>
     <input type="number" name="Id" id="Id"> <br><br>
 
