@@ -8,7 +8,7 @@
     <h3 class="display-4">Atualizar computador</h3>
 </div>
 
-<form action="/Computer/Update" method="post">
+<form asp-controller="Computer" asp-action="Update" method="post">
     
     <input type="hidden" name="Id" id="Id" value="@Model.Id" disable>  <br><br>
 
