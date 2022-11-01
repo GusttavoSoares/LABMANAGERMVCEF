@@ -32,6 +32,7 @@ else
                     <td>@computer.Processor</td>
                     <td>
                         <a class="btn btn-primary btn-sm" asp-controller="Computer" asp-action="Show" asp-route-id="@computer.Id">Ver</a>
+                        <a class="btn btn-warning btn-sm" asp-controller="Computer" asp-action="UpdateForm" asp-route-id="@computer.Id">Atualizar</a>
                         <a class="btn btn-danger btn-sm" asp-controller="Computer" asp-action="Delete" asp-route-id="@computer.Id">Apagar</a>
                     </td>
                 </tr>
