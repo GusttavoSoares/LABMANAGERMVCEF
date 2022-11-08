@@ -32,22 +32,35 @@ public class ComputerController : Controller
         return View();
     }
 
-    public IActionResult Create([FromForm] Computer computer)
+    [HttpPost]
+    public IActionResult CreateForm([FromForm] Computer computer)
     {
+
+    if (!ModelState.IsValid)
+    {
+        return View(computer);
+    }
+
         _context.Computers.Add(computer);
         _context.SaveChanges();
         return RedirectToAction("Index");
     }
 
-    public IActionResult UpdateForm(int id)
+    // public IActionResult UpdateForm(int id)
+    // {
+    //     Computer computer = _context.Computers.Find(id);
+    //     return View(computer);
+    // }
+
+    public IActionResult UpdateForm([FromForm] Computer computer)
     {
-        Computer computer = _context.Computers.Find(id);
+
+    if (!ModelState.IsValid)
+    {
         return View(computer);
     }
 
-    public IActionResult Update([FromForm] Computer computer)
-    {
-        Computer? computadorEncontrado = _context.Computers.Find(computer.Id);
+    Computer? computadorEncontrado = _context.Computers.Find(computer.Id);
 
         if(computadorEncontrado == null)
         {

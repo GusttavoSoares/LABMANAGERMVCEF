@@ -8,15 +8,17 @@
     <h3 class="display-4">Atualizar computador</h3>
 </div>
 
-<form asp-controller="Computer" asp-action="Update" method="post">
+<form asp-controller="Computer" asp-action="UpdateForm" method="post">
     
     <input type="hidden" asp-for="@Model.Id">  <br><br>
 
     <label for="Ram">Ram</label> <br>
-    <input asp-for="@Model.Ram" value="@Model.Ram"> <br><br>
+    <input asp-for="@Model.Ram" value="@Model.Ram"> <br>
+     <span asp-validation-for="Ram" class="text-danger"></span> <br>
 
     <label for="Processor">Processor</label> <br>
-    <input asp-for="@Model.Processor" value="@Model.Processor"> <br><br>
+    <input asp-for="@Model.Processor" value="@Model.Processor"> <br>
+    <span asp-validation-for="Processor" class="text-danger"></span>
 
     <button class="btn btn-primary btn-sm" type="submit">Enviar</button>
 

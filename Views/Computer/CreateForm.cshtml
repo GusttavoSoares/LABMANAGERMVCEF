@@ -8,16 +8,20 @@
     <h3 class="display-4">Criar computador</h3>
 </div>
 
-<form asp-controller="Computer" asp-action="Create" method="post">
+<form asp-controller="Computer" asp-action="CreateForm" method="post">
 
     <label for="Id">Id</label> <br>
-    <input asp-for="Id"> <br><br>
+    <input asp-for="Id"> <br>
+    <span asp-validation-for="Id" class="text-danger"></span>
 
+    <p>
     <label for="Ram">Ram</label> <br>
-    <input asp-for="Ram"> <br><br>
-
+    <input type="text" asp-for="Ram"> <br>
+    <span asp-validation-for="Ram" class="text-danger"></span>
+    </p>
     <label for="Processor">Processor</label> <br>
-    <input asp-for="Processor"> <br><br>
+    <input asp-for="Processor"> <br>
+    <span asp-validation-for="Processor" class="text-danger"></span>
 
     <button class="btn btn-primary btn-sm" type="submit">Enviar</button>
 
