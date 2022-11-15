@@ -5,6 +5,7 @@ namespace LabManager_MVC_EF.Models;
 public class Lab 
 {
     [Range(1, 999)]
+    [Required]
     public int Id { get; set; } 
 
     [Required]
