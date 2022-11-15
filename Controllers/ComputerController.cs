@@ -15,15 +15,15 @@ public class ComputerController : Controller
 
     public IActionResult Index() => View(_context.Computers); // Computers é o DbSet configurado
 
-    public IActionResult Show(int id) 
+    public IActionResult Show(int id)
     {
         Computer? computer = _context.Computers.Find(id);
 
-        if(computer == null)
+        if (computer == null)
         {
             return NotFound(); // RedirectToAction("Index"); 
         }
-    
+
         return View(computer);
     }
 
@@ -36,7 +36,7 @@ public class ComputerController : Controller
     public IActionResult CreateForm([FromForm] Computer computer)
     {
 
-        if(!ModelState.IsValid)
+        if (!ModelState.IsValid)
         {
             return View(computer);
         }
@@ -56,18 +56,18 @@ public class ComputerController : Controller
     public IActionResult UpdateForm([FromForm] Computer computer)
     {
 
-    if (!ModelState.IsValid)
-    {
-        return View(computer);
-    }
+        if (!ModelState.IsValid)
+        {
+            return View(computer);
+        }
 
-    Computer? computadorEncontrado = _context.Computers.Find(computer.Id);
+        Computer? computadorEncontrado = _context.Computers.Find(computer.Id);
 
-        if(computadorEncontrado == null)
+        if (computadorEncontrado == null)
         {
             return NotFound();
         }
-        
+
         computadorEncontrado.Id = computer.Id;
         computadorEncontrado.Processor = computer.Processor;
         computadorEncontrado.Ram = computer.Ram;
@@ -81,7 +81,7 @@ public class ComputerController : Controller
     {
         Computer? computer = _context.Computers.Find(id);
 
-        if(computer == null)
+        if (computer == null)
         {
             return NotFound(); // RedirectToAction("Index"); 
         }

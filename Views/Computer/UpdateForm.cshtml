@@ -9,16 +9,16 @@
 </div>
 
 <form asp-controller="Computer" asp-action="UpdateForm" method="post">
-    
-    <input type="hidden" asp-for="@Model.Id">  <br><br>
+
+    <input type="hidden" asp-for="@Model.Id"> <br><br>
 
     <label for="Ram">Ram</label> <br>
     <input asp-for="@Model.Ram" value="@Model.Ram"> <br>
-     <span asp-validation-for="Ram" class="text-danger"></span> <br>
+    <span asp-validation-for="Ram" class="text-danger"></span> <br>
 
     <label for="Processor">Processor</label> <br>
-    <input asp-for="@Model.Processor" value="@Model.Processor"> <br> <br>
-    <span asp-validation-for="Processor" class="text-danger"></span> <br> 
+    <input asp-for="@Model.Processor" value="@Model.Processor"> <br>
+    <span asp-validation-for="Processor" class="text-danger"></span> <br>
 
     <button class="btn btn-primary btn-sm" type="submit">Enviar</button>
 

@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace LabManager_MVC_EF.Models;
 
-public class Computer 
+public class Computer
 {
     [Range(1, 999)]
     public int Id { get; set; }
@@ -15,7 +15,7 @@ public class Computer
     [StringLength(20)]
     public string Processor { get; set; }
 
-    public Computer() {}
+    public Computer() { }
 
     public Computer(int id, string ram, string processor)
     {

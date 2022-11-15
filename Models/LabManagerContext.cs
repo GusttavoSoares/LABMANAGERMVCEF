@@ -9,6 +9,5 @@ public class LabManagerContext : DbContext
     
     public LabManagerContext(DbContextOptions<LabManagerContext> options) : base(options) {
         // chama o construtor da classe que está sendo herdada - base ( é equivalante ao super em Java)
-
     }
 }

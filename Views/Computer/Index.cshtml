@@ -14,25 +14,28 @@
 else
 {
     <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Ram</th>
-                <th>Processor</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach(var computer in Model)
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Ram</th>
+            <th>Processor</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var computer in Model)
             {
                 <tr>
                     <td>@computer.Id</td>
                     <td>@computer.Ram</td>
                     <td>@computer.Processor</td>
                     <td>
-                        <a class="btn btn-primary btn-sm" asp-controller="Computer" asp-action="Show" asp-route-id="@computer.Id">Ver</a>
-                        <a class="btn btn-warning btn-sm" asp-controller="Computer" asp-action="UpdateForm" asp-route-id="@computer.Id">Atualizar</a>
-                        <a class="btn btn-danger btn-sm" asp-controller="Computer" asp-action="Delete" asp-route-id="@computer.Id">Apagar</a>
+                        <a class="btn btn-primary btn-sm" asp-controller="Computer" asp-action="Show"
+                    asp-route-id="@computer.Id">Ver</a>
+                        <a class="btn btn-warning btn-sm" asp-controller="Computer" asp-action="UpdateForm"
+                    asp-route-id="@computer.Id">Atualizar</a>
+                        <a class="btn btn-danger btn-sm" asp-controller="Computer" asp-action="Delete"
+                    asp-route-id="@computer.Id">Apagar</a>
                     </td>
                 </tr>
             }
@@ -41,4 +44,3 @@ else
 }
 
 <a class="btn btn-primary btn-sm" asp-controller="Computer" asp-action="CreateForm">Criar computador</a>
-  
