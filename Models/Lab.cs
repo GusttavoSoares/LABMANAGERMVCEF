@@ -1,10 +1,22 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace LabManager_MVC_EF.Models;
 
 public class Lab 
 {
+    [Range(1, 999)]
     public int Id { get; set; } 
+
+    [Required]
+    [Range(1, 9999)]
     public int Number { get; set; } 
+
+    [Required]
+    [StringLength(20)]
     public string Name { get; set; }
+
+    [Required]
+    [StringLength(20)]
     public string Block { get; set; }
 
 

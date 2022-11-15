@@ -4,7 +4,7 @@ namespace LabManager_MVC_EF.Models;
 
 public class Computer 
 {
-    [Range(0, 999)]
+    [Range(1, 999)]
     public int Id { get; set; }
 
     [Required]

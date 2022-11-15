@@ -8,18 +8,21 @@
     <h3 class="display-4">Atualizar lab</h3>
 </div>
 
-<form asp-controller="Lab" asp-action="Update" method="post">
+<form asp-controller="Lab" asp-action="UpdateForm" method="post">
 
     <input type="hidden" asp-for="@Model.Id" value="@Model.Id">  <br><br>
 
     <label for="Number">Number</label> <br>
-    <input asp-for="@Model.Number" value=@Model.Number> <br><br>
+    <input asp-for="@Model.Number" value=@Model.Number> <br>
+      <span asp-validation-for="Number" class="text-danger"></span> <br>
 
     <label for="Name">Name</label> <br>
-    <input asp-for="@Model.Name" value=@Model.Name> <br><br>
+    <input asp-for="@Model.Name" value=@Model.Name> <br>
+    <span asp-validation-for="Name" class="text-danger"></span> <br>
 
     <label for="Block">Block</label> <br>
-    <input asp-for="@Model.Block" value=@Model.Block> <br><br>
+    <input asp-for="@Model.Block" value=@Model.Block> <br>
+      <span asp-validation-for="Block" class="text-danger"></span> <br>
 
     <button class="btn btn-primary btn-sm" type="submit">Enviar</button>
 

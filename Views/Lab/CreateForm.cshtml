@@ -8,19 +8,23 @@
     <h3 class="display-4">Criar lab</h3>
 </div>
 
-<form asp-controller="Lab" asp-action="Create" method="post">
+<form asp-controller="Lab" asp-action="CreateForm" method="post">
 
     <label for="Id">Id</label> <br>
     <input asp-for="Id"> <br><br>
+    <span asp-validation-for="Id" class="text-danger"></span>
 
     <label for="Ram">Number</label> <br>
     <input asp-for="Number"> <br><br>
+    <span asp-validation-for="Number" class="text-danger"></span>
 
     <label for="Processor">Name</label> <br>
     <input asp-for="Name"> <br><br>
+    <span asp-validation-for="Name" class="text-danger"></span>
 
     <label for="Processor">Block</label> <br>
     <input asp-for="Block"> <br><br>
+    <span asp-validation-for="Block" class="text-danger"></span>
 
     <button class="btn btn-primary btn-sm" type="submit">Enviar</button>
 

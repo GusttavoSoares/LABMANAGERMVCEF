@@ -31,8 +31,15 @@ public class LabController : Controller
         return View();
     }
 
-    public IActionResult Create([FromForm] Lab lab)
+    [HttpPost]
+    public IActionResult CreateForm([FromForm] Lab lab)
     {
+
+         if(!ModelState.IsValid)
+        {
+            return View(lab);
+        }
+
         _context.Labs.Add(lab);
         _context.SaveChanges();
         return RedirectToAction("Index");
@@ -55,12 +62,20 @@ public class LabController : Controller
 
     public IActionResult UpdateForm(int id)
     {
-        Lab lab = _context.Labs.Find(id);
+        Lab? lab = _context.Labs.Find(id);
         return View(lab);
     }
 
-    public IActionResult Update([FromForm] Lab lab)
+
+    [HttpPost]
+    public IActionResult UpdateForm([FromForm] Lab lab)
     {
+
+        if (!ModelState.IsValid)
+        {
+            return View(lab);
+        }
+
         Lab? labEncontrado = _context.Labs.Find(lab.Id);
 
         if(labEncontrado == null)
@@ -68,6 +83,7 @@ public class LabController : Controller
             return NotFound();
         }
         
+        labEncontrado.Id = lab.Id;
         labEncontrado.Number = lab.Number;
         labEncontrado.Name = lab.Name;
         labEncontrado.Block = lab.Block;

@@ -36,22 +36,23 @@ public class ComputerController : Controller
     public IActionResult CreateForm([FromForm] Computer computer)
     {
 
-    if (!ModelState.IsValid)
-    {
-        return View(computer);
-    }
+        if(!ModelState.IsValid)
+        {
+            return View(computer);
+        }
 
         _context.Computers.Add(computer);
         _context.SaveChanges();
         return RedirectToAction("Index");
     }
 
-    // public IActionResult UpdateForm(int id)
-    // {
-    //     Computer computer = _context.Computers.Find(id);
-    //     return View(computer);
-    // }
+    public IActionResult UpdateForm(int id)
+    {
+        Computer? computer = _context.Computers.Find(id);
+        return View(computer);
+    }
 
+    [HttpPost]
     public IActionResult UpdateForm([FromForm] Computer computer)
     {
 
