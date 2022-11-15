@@ -40,6 +40,12 @@ public class LabController : Controller
             return View(lab);
         }
 
+        if (_context.Labs.Find(lab.Id) != null) 
+        {
+            throw new Exception("Já existe um lab com esse Id");
+        }
+
+
         _context.Labs.Add(lab);
         _context.SaveChanges();
         return RedirectToAction("Index");

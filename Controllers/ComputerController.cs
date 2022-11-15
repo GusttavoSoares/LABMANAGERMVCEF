@@ -41,6 +41,11 @@ public class ComputerController : Controller
             return View(computer);
         }
 
+        if (_context.Computers.Find(computer.Id) != null) 
+        {
+            throw new Exception("Já existe um computador com esse Id");
+        }
+
         _context.Computers.Add(computer);
         _context.SaveChanges();
         return RedirectToAction("Index");
